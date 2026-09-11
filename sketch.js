@@ -2,7 +2,7 @@ function setup() {
   createCanvas(1000, 1000);
   background('#ffffff')
   noStroke()
-  fill ('rgb(77, 168, 125)')
+  fill ('#9bcf86')
   //body
   ellipse(400,400,300,340)
   //rshoulder
@@ -22,4 +22,12 @@ function setup() {
   stroke('red')
   noFill()
  arc(400, 400, 40, 40, 0, PI );
+//lchekk
+noStroke()
+fill('#FFD4CA')
+ellipse(320,405,50,30)
+ellipse(490,405,50,30)
+textSize(48)
+text('🌸',300,300)
+
 }
