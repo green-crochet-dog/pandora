@@ -1,11 +1,26 @@
+let g =137
+let colors = ['#9bcf86','#48e2f7']
 function setup() {
-  createCanvas(1000, 1000);
-  background('#ffffff')
-  noStroke()
-  fill ('#9bcf86')
+  createCanvas(1000, 1000)
+   let button= createButton('change background')
+   button.position ( 0, 100)
+   button.mousePressed( repaint )
+}
+function draw() {
+background(g)
+body()
+arms()
+face()
+hacc()
+}
+function body(){
+ noStroke()
+  fill ( colors[0,1,2,3,4,5])
   //body
   ellipse(400,400,300,340)
-  //rshoulder
+}
+function arms(){
+   //rshoulder
   ellipse(550,400,110,80)
 //handr
   ellipse(600,350,60,130)
@@ -13,7 +28,9 @@ function setup() {
   ellipse(250,460,110,80)
   //lhand
   ellipse(200,410,60,130)
-  //left eye
+}
+function face(){
+   //left eye
   fill('black')
   ellipse(350,360,28,37)
   //reye
@@ -26,8 +43,12 @@ function setup() {
 noStroke()
 fill('#FFD4CA')
 ellipse(320,405,50,30)
-ellipse(490,405,50,30)
-textSize(48)
-text('🌸',300,300)
-
+ellipse(490,405,50,30) 
 }
+function hacc(){
+   textSize(48)
+text('🌸',300,300)
+}
+function repaint (){
+ g = random(255);
+  }
