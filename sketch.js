@@ -1,5 +1,7 @@
-let g =137
-let colors = ['#9bcf86','#48e2f7']
+let g =137;
+let colors = ['#9bcf86','#48e2f7','#8f2207','#ed9316','#fce871'];
+let sharwama = 0;
+
 
 function setup(){
   createCanvas(1000, 1000)
@@ -8,7 +10,7 @@ function setup(){
    button.mousePressed(repaint )
    let button2 =createButton('change body colour')
    button2.position(150, 100)
-   button2.mousePressed(repaint )
+   button2.mousePressed(paintover)
 }
 function draw(){
 background(g)
@@ -19,7 +21,7 @@ hacc()
 }
 function body(){
  noStroke()
-  fill ( colors[0,1,2,3,4,5])
+  fill ( colors[sharwama])
   //body
   ellipse(400,400,300,340)
 }
@@ -56,3 +58,10 @@ text('🌸',300,300)
 function repaint (){
  g = random(255);
   }
+function paintover(){
+ alert(sharwama)
+  if(sharwama > 3 ){
+    sharwama = 0 ;
+  } else {sharwama++}
+  
+}
