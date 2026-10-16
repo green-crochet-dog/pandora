@@ -1,7 +1,7 @@
 let g =137;
 let colors = ['#9bcf86','#48e2f7','#8f2207','#ed9316','#fce871'];
 let sharwama = 0;
-
+let hacce = ['💿','☠','🌱']
 
 function setup(){
   createCanvas(1000, 1000)
@@ -11,6 +11,10 @@ function setup(){
    let button2 =createButton('change body colour')
    button2.position(150, 100)
    button2.mousePressed(paintover)
+   let button3 =createButton('change hair accsesories')
+   button3.position(300, 100)
+   button3.mousePressed(CHANGEHACC)
+   
 }
 function draw(){
 background(g)
@@ -53,15 +57,17 @@ ellipse(490,405,50,30)
 }
 function hacc(){
    textSize(48)
-text('🌸',300,300)
+text(hacce[2],300,300)
 }
 function repaint (){
  g = random(255);
   }
 function paintover(){
- alert(sharwama)
   if(sharwama > 3 ){
     sharwama = 0 ;
   } else {sharwama++}
-  
+}
+function CHANGEHACC(){
+   textSize(48)
+text(' 🎀',300,300)
 }
