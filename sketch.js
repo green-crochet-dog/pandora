@@ -2,6 +2,9 @@ let g =137;
 let colors = ['#9bcf86','#48e2f7','#8f2207','#ed9316','#fce871'];
 let sharwama = 0;
 let hacce = ['💿','☠','🌱']
+let agosto= 0;
+let jazz ;
+
 
 function setup(){
   createCanvas(1000, 1000)
@@ -14,6 +17,7 @@ function setup(){
    let button3 =createButton('change hair accsesories')
    button3.position(300, 100)
    button3.mousePressed(CHANGEHACC)
+   jazz.draggable();
    
 }
 function draw(){
@@ -56,8 +60,11 @@ ellipse(320,405,50,30)
 ellipse(490,405,50,30) 
 }
 function hacc(){
-   textSize(48)
-text(hacce[2],300,300)
+textSize(248)
+text(hacce[agosto],300,300)
+jazz = createP ('💿')
+ jazz.position(300, 300);
+ jazz.size(180,120)
 }
 function repaint (){
  g = random(255);
@@ -68,6 +75,8 @@ function paintover(){
   } else {sharwama++}
 }
 function CHANGEHACC(){
-   textSize(48)
-text(' 🎀',300,300)
+ if(agosto > 3 ){
+   agosto= 0 ;
+  } else {agosto++}
+
 }
