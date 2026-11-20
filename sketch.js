@@ -1,8 +1,8 @@
 let g =137;
 let colors = ['#9bcf86','#48e2f7','#8f2207','#ed9316','#fce871'];
-let sharwama = 0;
+let sharwama = 1;
 let hacce = ['💿','☠','🌱']
-let agosto= 0;
+let agosto= 1;
 let jazz;
 
 
@@ -19,9 +19,10 @@ function setup(){
    button3.mousePressed(CHANGEHACC)
 
    //the div that holds the HACC emoji
-  jazz = createDiv("TEST")
-  jazz.position(300,300);
-  jazz.draggable()
+ // jazz = createDiv(hacce[2])
+  //jazz.position(300,300);
+  //jazz.draggable()
+
 }
 function draw(){
   background(g)
@@ -29,6 +30,7 @@ function draw(){
   arms()
   face()
   hacc()
+  text()
 }
 
 function body(){
@@ -65,9 +67,9 @@ ellipse(490,405,50,30)
 }
 function hacc(){
 
-// textSize(148)
+ textSize(248)
 // text(hacce[agosto],300,300)
-jazz.html(hacce[agosto], 300, 300);
+//jazz.html(hacce[agosto], 300, 300);
 
 }
 function repaint (){
